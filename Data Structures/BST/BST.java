@@ -34,21 +34,28 @@ public class BST {
 
 	private Node insertRec(Node root, int data) {
 
+		// once we have recurred to the appropriate leaf, create the node
+		// and return a reference to it so that way it's parent can link to it
 		if (root == null) {
 			root = new Node(data);
 			return root;	// we must return root so that way it's reference isn't lost
 		}
+		// if data is greater than current parent node, recur down right subtree
 		else if (data > root.data) {
 			root.right = insertRec(root.right, data);
 		}
+		// if data is less than current parent node, than recur down left subtree
 		else if (data < root.data) {
 			root.left = insertRec(root.left, data);
 		}
+
 		return root;
 	}
+
 	private void printInOrder() {
 		printInOrderRec(this.root);
 	}
+
 	private void printInOrderRec(Node root) {
 		if (root != null) {
 			printInOrderRec(root.left);

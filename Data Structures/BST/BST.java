@@ -64,6 +64,30 @@ public class BST {
 		}
 	}
 
+	private void printPreOrder() {
+		printPreOrderRec(this.root);
+	}
+
+	private void printPreOrderRec(Node root) {
+		if (root != null) {
+			System.out.println(root.data);
+			printPreOrderRec(root.left);
+			printPreOrderRec(root.right);
+		}
+	}
+
+	private void printPostOrder() {
+		printPostOrderRec(this.root);
+	}
+
+	private void printPostOrderRec(Node root) {
+		if (root != null) {
+			printPostOrderRec(root.left);
+			printPostOrderRec(root.right);
+			System.out.println(root.data);
+		}
+	}
+
 	public static void main(String[] args) {
 		BST tree = new BST();
 
@@ -75,7 +99,7 @@ public class BST {
     tree.insert(60);
     tree.insert(80);
 
-		tree.printInOrder();
+		tree.printPreOrder();
 
 	}
 

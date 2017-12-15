@@ -12,12 +12,12 @@
 //            / \    /
 //           4   7  13  <--- leaves because they have no children
 
-// TODO: search, deletion
+
 import java.util.LinkedList;
 
 public class BST {
 
-	public Node root;
+	private Node root;
 
 	private class Node {
 		int data;
@@ -54,7 +54,7 @@ public class BST {
 
 		return root;
 	}
-	// Time & space complexity: worst - O(h) = O(logn)							
+	// Time & space complexity: worst - O(h) = O(logn)
 	private void search(int data) {
 
 		if (searchRec(this.root, data)) {
@@ -82,6 +82,61 @@ public class BST {
 		else {
 			return true;
 		}
+	}
+
+	private void delete(int data) {
+		deleteRec(this.root, data);
+	}
+
+	private Node deleteRec(Node root, int data) {
+		// Didn't find the node
+		if (root == null) {
+			return root;
+		}
+    // find the node first!
+		if (data > root.data) {
+			// I am potentially reassigning the address of root.right to some other value
+			// in the call to deleteRec. If i don't return that new address when I return
+			// from deleteRec then root.right will still refer to the OLD root.right address
+			root.right = deleteRec(root.right, data);
+		}
+		else if (data < root.data) {
+			root.left = deleteRec(root.left, data);
+		}
+		// found the node!
+		else {
+			// case 1: Node to be deleted has NO CHILDREN
+			if (root.left == null && root.right == null) {
+				root = null;
+			}
+			// case 2: Node to be deleted has ONE CHILD
+			else if (root.left == null) { // I only have a right child
+				root = root.right; // reassign my address to my only child
+			}
+			else if (root.right == null) {
+				root = root.left;
+			}
+			// case 3: Node to be deleted has TWO CHILDREN
+			else {
+				// Find the MIN data val in the right subtree and assign it
+				// to the val of the node to be deleted.
+				// then delete that min node from the right subtree
+				Node min = findMin(root.right);
+				root.data = min.data;
+				root.right = deleteRec(root.right, min.data);
+			}
+
+		}
+
+		return root;
+	}
+
+	private Node findMin(Node root) {
+		// found min value
+		if (root.left == null) {
+			return root;
+		}
+		return findMin(root.left);
 	}
 
 	// Traversal algorithms:
@@ -159,10 +214,11 @@ public class BST {
     tree.insert(20);
     tree.insert(40);
     tree.insert(70);
-    tree.insert(60);
+    //tree.insert(60);
     tree.insert(80);
 
-		tree.search(80);
+		tree.delete(40);
+		tree.printInOrder();
 
 	}
 

@@ -12,7 +12,7 @@
 //            / \    /
 //           4   7  13  <--- leaves because they have no children
 
-// TODO: search, deletion, bfs
+// TODO: search, deletion
 import java.util.LinkedList;
 
 public class BST {
@@ -53,6 +53,35 @@ public class BST {
 		}
 
 		return root;
+	}
+	// Time & space complexity: worst - O(h) = O(logn)							
+	private void search(int data) {
+
+		if (searchRec(this.root, data)) {
+			System.out.println("Found: " + data);
+		}
+		else {
+			System.out.println("Did not find: " + data);
+		}
+	}
+
+	private boolean searchRec(Node root, int data) {
+
+		if (root == null) {
+			return false;
+		}
+
+		if (data < root.data) {
+			boolean found = searchRec(root.left, data);
+			return found;
+		}
+		else if (data > root.data) {
+			boolean found = searchRec(root.right, data);
+			return found;
+		}
+		else {
+			return true;
+		}
 	}
 
 	// Traversal algorithms:
@@ -133,7 +162,7 @@ public class BST {
     tree.insert(60);
     tree.insert(80);
 
-		tree.levelOrder();
+		tree.search(80);
 
 	}
 

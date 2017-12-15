@@ -14,8 +14,8 @@ Analyze time and space complexity for each DS's operations
 6) Red/Black, Splay, or AVL -- Implement ONE
 7) Graphs - do basics, understand how they can be represented in memory and what
    they are used for. Much more will be done in the Algorithms section.
-8) Analyze differences between Hash-sets, hash-maps, and hash-tables (Java).
-   Do an example for each Hash DS that uses all of it's main features
+8) ~Analyze differences between Hash-sets, hash-maps, and hash-tables (Java).
+   Exercises will be done in coding section~
 
 #### Dec 18th - 25th (To be planned)
 

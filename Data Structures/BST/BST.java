@@ -12,6 +12,9 @@
 //            / \    /
 //           4   7  13  <--- leaves because they have no children
 
+// TODO: search, deletion, bfs
+import java.util.LinkedList;
+
 public class BST {
 
 	public Node root;
@@ -52,6 +55,20 @@ public class BST {
 		return root;
 	}
 
+	// Traversal algorithms:
+	// DFS - Preorder, Inorder, PostOrder
+	// 			 DFS is recursive so memory (stack) grows proportional to recursive calls
+	// 			 Time Complexity: 	All cases - O(n)... has to visit all nodes every time
+	//       Space Complexity: 	Best/Avg - O(logn) .. tree is balanced
+  //												  Worst - O(n) .. tree is linear
+	// BFS - levelOrder
+	//       BFS keeps a queue of univisited nodes and visits nodes at each
+	//       level before moving to next level
+	//
+	//       Time Complexity:   All cases: O(n) .. has to visit all nodes
+	//       Space Complexity:  "Best case": O(1).. tree is a linked list and only
+	//																						one element is kept in queue
+	//                          Avg/Worst: O(n)
 	private void printInOrder() {
 		printInOrderRec(this.root);
 	}
@@ -88,6 +105,23 @@ public class BST {
 		}
 	}
 
+
+	public void levelOrder() {
+		java.util.LinkedList<Node> queue = new java.util.LinkedList<Node>();
+
+		if (this.root != null) {
+			queue.add(this.root);
+		}
+
+		while (queue.size() != 0) {
+			Node current = queue.remove();
+			if (current.left != null) {queue.add(current.left);}
+			if (current.right != null) {queue.add(current.right);}
+			System.out.println(current.data);
+		}
+
+	}
+
 	public static void main(String[] args) {
 		BST tree = new BST();
 
@@ -99,7 +133,7 @@ public class BST {
     tree.insert(60);
     tree.insert(80);
 
-		tree.printPreOrder();
+		tree.levelOrder();
 
 	}
 

@@ -6,9 +6,9 @@
 Implement the following Data Structures with their common methods &
 Analyze time and space complexity for each DS's operations
 
-1) Linked List
-2) Stack
-3) Queue
+1) ~Linked List~
+2) ~Stack~
+3) ~Queue~
 4) BST with BFS and DFS traversal. Inorder, postorder and preorder traversal
 5) Heap (Min, Max)
 6) Red/Black, Splay, or AVL -- Implement ONE

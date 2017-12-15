@@ -10,12 +10,11 @@ Analyze time and space complexity for each DS's operations
 2) ~Stack~
 3) ~Queue~
 4) ~BST with BFS and DFS traversal. Inorder, postorder and preorder traversal~
-5) Heap (Min, Max)
-6) Red/Black, Splay, or AVL -- Implement ONE
-7) Graphs - do basics, understand how they can be represented in memory and what
-   they are used for. Much more will be done in the Algorithms section.
-8) ~Analyze differences between Hash-sets, hash-maps, and hash-tables (Java).
+5) ~Analyze differences between Hash-sets, hash-maps, and hash-tables (Java).
    Exercises will be done in coding section~
+6) Graphs - do basics, understand how they can be represented in memory and what
+   they are used for.
+7) Heap (Min, Max)
 
 #### Dec 18th - 25th (To be planned)
 

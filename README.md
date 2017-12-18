@@ -17,9 +17,15 @@ Analyze time and space complexity for each DS's operations
 
 #### Dec 18th - 25th (To be planned)
 
-Algorithms such as:
+Algorithms:
 
-Sorting (plus searching and binary search), Divide-and-Conquer,
+#####Divide & Conquer/Sorting
+1. ~MergeSort & QuickSort~
+2. Binary Search
+
+####Searching
+1. DFS/BFS
+
 Dynamic Programming/Memoization, Greediness, Recursion
 or algorithms linked to a specific data structure.
 

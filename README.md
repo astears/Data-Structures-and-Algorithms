@@ -25,7 +25,7 @@ Algorithms:
 
 #### Searching
 1. ~BFS~
-2. DFS
+2. ~DFS~
 
 Dynamic Programming/Memoization, Greediness, Recursion
 or algorithms linked to a specific data structure.

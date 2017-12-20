@@ -20,11 +20,12 @@ Analyze time and space complexity for each DS's operations
 Algorithms:
 
 ##### Divide & Conquer/Sorting
-1. ~MergeSort & QuickSort~
-2. Binary Search
+1. ~MergeSort~
+2. ~QuickSort~
 
 #### Searching
-1. DFS/BFS
+1. ~BFS~
+2. DFS
 
 Dynamic Programming/Memoization, Greediness, Recursion
 or algorithms linked to a specific data structure.

@@ -29,8 +29,6 @@ Algorithms:
 
 #### Dynamic Programming/Memoization
 
-#### Summarize everything I've learned so far, put it together.
-
 #### Dec 26th - Jan 2nd (To be planned)
 
 Practice problems!!

@@ -27,8 +27,16 @@ Algorithms:
 1. ~BFS~
 2. ~DFS~
 
-#### Dynamic Programming/Memoization
-
 #### Dec 26th - Jan 2nd (To be planned)
 
-Practice problems!!
+Practice problems
+
+#### Dec 31st
+  5 Dynamic programming problems
+#### Jan 1st
+
+#### Jan 2nd
+
+#### Jan 3rd
+
+Review

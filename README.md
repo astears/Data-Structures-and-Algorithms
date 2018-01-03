@@ -32,7 +32,7 @@ Algorithms:
 Practice problems
 
 #### Dec 31st
-  5 Dynamic programming problems
+  5 problems
 #### Jan 1st
 
 #### Jan 2nd
